@@ -3,8 +3,9 @@ import { Outlet } from "@remix-run/react";
 import ExpensesList from "~/components/expenses/ExpensesList";
 
 import expensesStyles from "~/styles/expenses.css?url";
+import { Expense } from "~/types/Expense";
 
-const DUMMY_EXPENSES = [
+const DUMMY_EXPENSES: Expense[] = [
   {
     id: "e1",
     title: "First Expense",

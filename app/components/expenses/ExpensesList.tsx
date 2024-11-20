@@ -1,7 +1,11 @@
-import ExpenseListItem from './ExpenseListItem';
+import { Expense } from "~/types/Expense";
+import ExpenseListItem from "./ExpenseListItem";
 
-function ExpensesList({ expenses }) {
+interface Props {
+  expenses: Expense[];
+}
 
+function ExpensesList({ expenses }: Props) {
   return (
     <ol id="expenses-list">
       {expenses.map((expense) => (

@@ -1,4 +1,9 @@
-function ExpenseListItem({ title, amount }) {
+import { Link } from "@remix-run/react";
+import { Expense } from "~/types/Expense";
+
+interface Props extends Pick<Expense, "id" | "title" | "amount"> {}
+
+function ExpenseListItem({ id, title, amount }: Props) {
   function deleteExpenseItemHandler() {
     // tbd
   }
@@ -11,7 +16,7 @@ function ExpenseListItem({ title, amount }) {
       </div>
       <menu className="expense-actions">
         <button onClick={deleteExpenseItemHandler}>Delete</button>
-        <a href="tbd">Edit</a>
+        <Link to={id}>Edit</Link>
       </menu>
     </article>
   );

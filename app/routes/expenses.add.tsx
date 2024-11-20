@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useNavigate } from "@remix-run/react";
 import ExpenseForm from "~/components/expenses/ExpenseForm";
+import Modal from "~/components/util/Modal";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,5 +11,15 @@ export const meta: MetaFunction = () => {
 };
 
 export default function ExpensesAddPage() {
-  return <ExpenseForm />;
+  const navigate = useNavigate();
+
+  const closeHandler = () => {
+    navigate("..");
+  };
+
+  return (
+    <Modal onClose={closeHandler}>
+      <ExpenseForm />
+    </Modal>
+  );
 }

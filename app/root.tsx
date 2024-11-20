@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 
 import sharedStyles from "~/styles/shared.css?url";
+import MainHeader from "./components/navigation/MainHeader";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,6 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <MainHeader />
         {children}
         <ScrollRestoration />
         <Scripts />
