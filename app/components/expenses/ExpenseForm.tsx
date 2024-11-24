@@ -29,7 +29,7 @@ function ExpenseForm() {
       </div>
       <div className="form-actions">
         <button>Save Expense</button>
-        <Link to="..">Cancel</Link>
+        <Link to="/expenses">Cancel</Link>
       </div>
     </form>
   );

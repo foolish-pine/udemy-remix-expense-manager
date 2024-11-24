@@ -14,7 +14,7 @@ export default function UpdateExpensesPage() {
   const navigate = useNavigate();
 
   const closeHandler = () => {
-    navigate("..");
+    navigate("/expenses");
   };
 
   return (

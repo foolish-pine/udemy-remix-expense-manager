@@ -31,7 +31,7 @@ export const links: LinksFunction = () => [
   { rel: "stylesheet", href: expensesStyles },
 ];
 
-export default function ExpensesLayout() {
+export default function Expenses() {
   return (
     <>
       <Outlet />
